@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 import "./App.css";
+import Activity from "./Componants/Activity";
+import Container from "./Componants/Container";
 
 const App = () => {
   const [activity, setActivity] = useState("");
@@ -8,7 +10,7 @@ const App = () => {
   const [done, setDone] = useState("");
   const [todos, setTodos] = useState([]);
 
-  const handleAddTodo = () => {
+  const BtnClick = () => {
     setTodos([...todos, { activity, description, done }]);
     setActivity("");
     setDone("");
@@ -16,32 +18,21 @@ const App = () => {
   };
 
   return (
-    
     <div className="App">
-      <div className="container">
-        <div className="input-div">
-          <input
-            type="text"
-            placeholder="Activity"
-            value={activity}
-            onChange={(e) => setActivity(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </div>
-        <button onClick={handleAddTodo}>Submit</button>
-      </div>
+      <Container
+        activity={activity}
+        description={description}
+        BtnClick={BtnClick}
+        setActivity={setActivity}
+        setDescription={setDescription}
+      />
 
       {todos.map((todo) => (
-        <div className="activity">
-          <h1>{todo.activity}</h1>
-          <h2 className="description">{todo.description}</h2>
-          <h3>{todo.done="Not done yet"}</h3>
-        </div>
+        <Activity 
+        todoActivity={todo.activity}
+        todoDescription={todo.description}
+        todoDone={todo.done}
+        />
       ))}
     </div>
   );

@@ -1,5 +1,5 @@
 body {
- background-color: black;
+ background-image: url('https://img.freepik.com/free-vector/hazy-black-ink-texture-with-brushstrokes_125540-1360.jpg?w=1060&t=st=1676066089~exp=1676066689~hmac=d7841d3aa29cbf08f627d475234df722d89672040a2943533c1c0daa71eda3d3');
   background-repeat: no-repeat;
   background-size: cover;
   height: 45vw;
@@ -72,7 +72,7 @@ input:hover {
 
 .activity {
   border: 3px solid;
-  width: 1470px;
+  width: 1450px;
   height: 100px;
   margin: 10px 0;
   display: flex;
@@ -88,10 +88,13 @@ input:hover {
 
 .activity:hover {
   height: 120px;
-  background-color: rgba(255, 255, 255, 0.326);
+  background-color: rgba(255, 217, 0, 0.31);
   border-radius: 0px;
   width: 1500px;
-  gap: 700px;
+  gap: 900px;
+  border: solid gold;
+  color: gold;
+  font-size: 25px;
 }
 
 .description{
